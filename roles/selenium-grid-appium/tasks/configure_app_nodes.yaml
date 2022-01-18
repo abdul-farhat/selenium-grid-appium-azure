@@ -1,0 +1,5 @@
+---
+ - include_tasks: configure_appium_mac_apps.yaml
+   with_items:
+      - {phone_name: 'iPhone 11 Pro' , port_appium_remote: 4726, wda_port_appium_remote: 5726 , os_version: '14.2', browser: 'Safari'}
+      - {phone_name: 'iPhone 12 Pro' , port_appium_remote: 4727, wda_port_appium_remote: 5727 , os_version: '14.2', browser: 'Safari'}

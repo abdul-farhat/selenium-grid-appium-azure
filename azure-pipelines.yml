@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+pool:
+  vmImage: '	macOS-10.15'
+
+steps:
+- script: brew install ansible screen
+  displayName: 'Install ansible and screen'
+- script: ansible-playbook setup.yaml -i inventory.ini
+  displayName: 'Start and register grid'
+
+- script: |
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
